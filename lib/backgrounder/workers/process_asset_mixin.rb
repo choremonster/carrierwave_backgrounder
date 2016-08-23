@@ -20,6 +20,8 @@ module CarrierWave
         else
           when_not_ready
         end
+      rescue NoMethodError
+        #this handles nil files
       end
 
     end # ProcessAssetMixin
